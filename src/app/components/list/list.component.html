@@ -1,0 +1,22 @@
+<!-- Contenedor del proyecto-->
+<div class="flex flex-col items-center">
+   
+    <!-- Contenedor de la formulario-->
+    <div class="w-full max-w-2xl">
+
+        <app-form (empleadoEvent) = "addEmpleado($event)" />
+    </div>
+  
+
+    <!-- Contenedor de la lista-->
+    <div class="flex flex-col bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-2xl space-y-2 ">
+
+        <h3 class="font-bold text-2xl dark:text-gray-300">Empleados</h3>
+
+        @for (empleado of empleados; track $index){
+            <app-item-list [empleadoInput] = "empleado"></app-item-list>
+           }
+    </div>
+              
+</div>
+

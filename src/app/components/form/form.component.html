@@ -1,0 +1,74 @@
+<!-- Contenedor de formulario-->
+<div class="flex flex-col items-center justify-center p-5">
+
+    
+    <!-- Empieza el formulario-->
+    <form [formGroup] = "mForm" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full  space-y-2">
+
+        <h3 class="font-bold text-2xl dark:text-gray-300">Agregar Nuevo Empleado</h3>
+        <!-- Contenedor de nombre y apellidos-->
+        <div class="flex flex-row rounded-lg space-x-2">
+
+            <!-- input NOMBRE-->
+            <input
+                id = "nombre" 
+                type="text"
+                placeholder="Nombre"
+                formControlName = "nombre"
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
+            />
+
+             <!-- input Apellidos-->
+             <input
+                id = "apellidos" 
+                type="text"
+                placeholder="Apellidos"
+                formControlName = "apellidos"
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
+            />
+
+
+        </div>
+
+    <!-- input PUESTO-->
+    <input
+        id = "puesto" 
+        type="text"
+        placeholder="Puesto"
+        formControlName = "puesto"
+        class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
+    />
+    <!-- input TELEFONO-->
+    <input
+        id = "telefono" 
+        type="text"
+        placeholder="Telefono"
+        formControlName = "telefono"
+        class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
+    />
+    <!-- input CHECKBOX-->
+    <div class="flex items-center">
+        <input 
+          type="checkbox" 
+          id="checkbox" 
+          class="mr-2"
+        />
+        <label 
+        for="checkbox"
+        class="dark:text-gray-400"
+        >Trabaja de forma remota</label>
+      </div>
+
+      <!-- BOTON-->
+
+      <button
+      (click) = "sendForm()"
+      type="submit"
+      class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-400"
+    >
+      Agregar Empleado
+    </button>
+        
+    </form>
+
+</div>

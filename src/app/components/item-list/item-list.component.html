@@ -1,0 +1,19 @@
+ <!-- Contenedor de los empleados-->
+ <div class="flex flex-row items-center w-max">
+
+    <p class="dark:text-gray-400 px-3"> {{empleadoInput.nombre + empleadoInput.apellidos}}</p>
+    <p class="dark:text-gray-400 px-3"> {{empleadoInput.puesto}}</p>
+    <p class="dark:text-gray-400 px-3"> {{empleadoInput.telefono}}</p>
+    <input 
+          type="checkbox" 
+          id="checkbox" 
+          class="mr-2"
+        />
+        <button
+        type="submit"
+        class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-red-400"
+      >
+        Eliminar
+      </button>
+</div>
+
